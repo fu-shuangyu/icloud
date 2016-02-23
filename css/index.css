@@ -1,0 +1,280 @@
+body,ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: Arial;
+}
+*{
+	cursor: default;
+}
+.zuo{
+	width: 400px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: #383836;
+	color: white;
+	font-size: 20px;
+	padding-top: 15px;
+	box-sizing: border-box;
+}
+.title span span:last-child{
+	color:#aaa;
+	margin-left: 5px;
+	margin-right: 100px;
+}
+.title .jia{
+	color:#aaa;
+	font-size: 30px;
+	margin-top: -5px;
+}
+.title .jia:hover{
+	color: #ddd;
+	cursor: pointer;
+}
+.title span:first-child{
+	float: left;
+	margin-left: 10px;
+}
+.title span span:last-child:hover {
+    color: #ddd;
+	cursor: pointer;
+}
+.title span:last-child{
+	float: right;
+	clear: right;
+	margin-right: 10px;
+}
+.hr{
+	width: 100%;
+	height: 0;
+	font-size: 0;
+	border-bottom: 1px solid #0f0f0f;
+	margin-top: 40px;
+}
+
+
+.zuo ul li{
+	height: 40px;
+	color: #fff;
+	line-height: 40px;
+	font-size: 20px;
+	padding-left: 50px;
+	border-bottom: 1px solid #2f2f2f;
+}
+.zuo ul li span:first-child{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	display: inline-block;
+	float: left;
+	margin-top: 14px;
+	margin-right: 8px;
+}
+
+
+
+
+div.you{
+	position: absolute;
+	left: 400px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #eee;
+	padding: 30px;
+}
+.purple{
+	color: purple;
+	background: url(../imgs/packed-5.png) -18px -570px no-repeat;
+}
+.blue{
+	color: blue;
+	background: url(../imgs/packed-5.png) -69px -570px no-repeat;
+}
+.pink{
+	color: pink;
+	background: url(../imgs/packed-5.png) -103px -570px no-repeat;
+}
+.orange{
+	color: orange;
+	background: url(../imgs/packed-5.png) -52px -570px no-repeat;
+}
+.brown{
+	color: brown;
+	background: url(../imgs/packed-5.png) -134px -548px no-repeat;
+}
+.green{
+	color: green;
+	background: url(../imgs/packed-5.png) -86px -570px no-repeat;
+}
+.yellow{
+	color: yellow;
+	background: url(../imgs/packed-5.png) -35px -570px no-repeat;
+}
+.you h1{
+	height: 70px;
+	line-height: 70px;
+	border-bottom: 1px solid #ccc;
+}
+.done-item,.new-item,ul li{
+	color: #ccc;
+	font-size: 20px;
+	height: 30px;
+	line-height: 30px;
+	    margin-left: 30px;
+	padding-bottom: 5px;
+}
+ul li{
+	color: #333;
+	border-bottom: 1px solid #c8c8c8;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	padding-left: 0px;
+}
+.new-item{
+	padding-left: 0;
+	margin-left: 30px;
+	height: 50px;
+	border-bottom: 1px solid #c8c8c8;
+	line-height: 50px;
+}
+.done-item{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #c8c8c8;
+    margin-top: -20px;
+}
+.active{
+	background: #333;
+}
+h1 span{
+	float: left;
+}
+h1 .edit{
+	position: relative;
+}
+h1 .edit span{
+	float: right;
+	font-weight: normal;
+	font-size: 25px;
+	margin-right: 20px;
+	line-height: 70px;
+}
+h1 .edit .zhanshibox{
+	width: 364px;
+	height: 236px;
+	position: absolute;
+	right: 70px;
+	top:-50px;
+	background: #fff;
+	border-radius: 10px;
+}
+h1 .edit .zhanshi{
+	width: 344px;
+	height: 216px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+.you ul li{
+	margin-left: 30px;
+}
+.zhanshi input{
+	width: 313px;
+	height: 43px;
+	border: 1px solid #aaa;
+	position: absolute;
+	left: 50%;
+	margin-left: -157px;
+	top: 18px;
+	border-radius: 5px;
+	font-size: 30px;
+}
+.zuo ul li input{
+	background: none;
+	outline: none;
+	border: none;
+	font-size: 20px;
+	color: #fff;
+}
+.you h1 input,.you ul li input{
+	outline: none;
+	border: none;
+	background: none;
+}
+.you h1 input{
+	font-size: 30px;
+	font-weight: bold;
+	float: left;
+	line-height: 70px;
+}
+.you ul li input{
+	font-size: 20px;
+	font-weight: normal;
+}
+.you .true li{
+	margin-left: 40px;
+}
+.zhanshi ul li{
+	border: none;
+}
+div.edit .zhanshibox .zhanshi input{
+	float: none;
+	line-height: 45px;
+	border: 1px solid #ccc;
+}
+div.edit .zhanshibox .zhanshi span{
+	float: none;
+	margin-top: 70px;
+	display: inline-block;
+	font-size: 20px;
+	color: #333;
+	margin-left: 12px;
+}
+.zhanshi ul li{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	display: block;
+	float: left;
+}
+
+div.delete{
+	font-size: 18px;
+	margin-left: 12px;
+	float: left;
+	color: red;
+	font-weight: normal;
+	height: 50px;
+	line-height: 50px;
+}
+.hang{
+	font-size: 0;
+	height: 0;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	margin-top: 30px;
+}
+.zhanshi .deright{
+	float: right;
+	height: 50px;
+	font-size: 18px;
+	color: blue;
+	margin-top: 7px;
+}
+.quxiao,.wncheng{
+	float: left;
+	width: 80px;
+	text-align: center;
+	line-height: 35px;
+}
+.quxiao{
+	height: 30px;
+	font-weight: normal;
+	border-right: 1px solid #f2f2f2;
+}
