@@ -82,8 +82,7 @@ div.you{
 	top: 0;
 	bottom: 0;
 	right: 0;
-	background: #eee;
-	padding: 30px;
+	background: #fff;
 }
 .purple{
 	color: purple;
@@ -113,6 +112,99 @@ div.you{
 	color: yellow;
 	background: url(../imgs/packed-5.png) -35px -570px no-repeat;
 }
+
+
+.purple1{
+	color: purple;
+	background: url(../imgs/stylesheet-1.png) 0px -231px no-repeat;
+}
+.blue1{
+	color: blue;
+	background: url(../imgs/stylesheet-1.png) 0px -281px no-repeat;
+}
+.pink1{
+	color: pink;
+	background: url(../imgs/stylesheet-1.png) 0px -356px no-repeat;
+}
+.orange1{
+	color: orange;
+	background: url(../imgs/stylesheet-1.png) 0px -381px no-repeat;
+}
+.brown1{
+	color: brown;
+	background: url(../imgs/stylesheet-1.png) 0px -331px no-repeat;
+}
+.green1{
+	color: green;
+	background: url(../imgs/stylesheet-1.png) 0px -256px no-repeat;
+}
+.yellow1{
+	color: yellow;
+	background: url(../imgs/stylesheet-1.png) 0px -306px no-repeat;
+}
+
+
+.purple2{
+	color: purple;
+	background: url(../imgs/packed-5.png) -66px -468px no-repeat;
+}
+.blue2{
+	color: blue;
+	background: url(../imgs/packed-5.png) -78px -363px no-repeat;
+}
+.pink2{
+	color: pink;
+	background: url(../imgs/packed-5.png) -130px -404px no-repeat;
+}
+.orange2{
+	color: orange;
+	background: url(../imgs/packed-5.png) -2px -436px no-repeat;
+}
+.brown2{
+	color: brown;
+	background: url(../imgs/packed-5.png) -98px -436px no-repeat;
+}
+.green2{
+	color: green;
+	background: url(../imgs/packed-5.png) -44px -362px no-repeat;
+}
+.yellow2{
+	color: yellow;
+	background: url(../imgs/packed-5.png) -138px -270px no-repeat;
+}
+
+
+
+.purple3{
+	color: purple;
+	background: url(../imgs/packed-5.png) -2px -468px no-repeat;
+}
+.blue3{
+	color: blue;
+	background: url(../imgs/packed-5.png) -76px -362px no-repeat;
+}
+.pink3{
+	color: pink;
+	background: url(../imgs/packed-5.png) -66px -404px no-repeat;
+}
+.orange3{
+	color: orange;
+	background: url(../imgs/packed-5.png) -98px -468px no-repeat;
+}
+.brown3{
+	color: brown;
+	background: url(../imgs/packed-5.png) -34px -436px no-repeat;
+}
+.green3{
+	color: green;
+	background: url(../imgs/packed-5.png) -34px -404px no-repeat;
+}
+.yellow3{
+	color: yellow;
+	background: url(../imgs/packed-5.png) -138px -202px no-repeat;
+}
+
+
 .you h1{
 	height: 70px;
 	line-height: 70px;
@@ -182,7 +274,7 @@ h1 .edit .zhanshi{
 	border-radius: 10px;
 }
 .you ul li{
-	margin-left: 30px;
+	margin-left: 20px;
 }
 .zhanshi input{
 	width: 313px;
@@ -216,9 +308,12 @@ h1 .edit .zhanshi{
 .you ul li input{
 	font-size: 20px;
 	font-weight: normal;
+    margin-top: 11px;
 }
 .you .true li{
 	margin-left: 40px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 .zhanshi ul li{
 	border: none;
@@ -237,11 +332,13 @@ div.edit .zhanshibox .zhanshi span{
 	margin-left: 12px;
 }
 .zhanshi ul li{
-	width: 15px;
-	height: 15px;
+	width: 25px;
+	height: 25px;
 	border-radius: 50%;
 	display: block;
 	float: left;
+	padding-bottom: 0;
+	margin-top: -10px;
 }
 
 div.delete{
@@ -277,4 +374,85 @@ div.delete{
 	height: 30px;
 	font-weight: normal;
 	border-right: 1px solid #f2f2f2;
+}
+.zhanshibox.aa{
+	display: none;
+}
+.zhanshibox.bb{
+	display: block;
+}
+
+.you .you-top{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	padding: 0 30px;
+	box-sizing: border-box;
+}
+.you .you-top #iput{
+	width: 50%;
+	height: 50px;
+	outline: none;
+	background: none;
+	border: none;
+	font-size: 25px;
+	color: #ccc;
+	float: left;
+    background-image: url('../imgs/packed-5.png');
+    background-position: -138px -359px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+.you .you-top span{
+	line-height: 20px;
+	color: #777;
+	margin-top: 20px;
+	float: right;
+	display: block;
+	font-size: 20px;
+	padding-right: 20px;
+	border-right: 1px solid #ccc;
+	background: url(../imgs/jt.png) 65px 7px no-repeat;
+}
+.you .you-bottom{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 30px;
+}
+.you .you-top h1{
+	position: absolute;
+	top:30px;
+	left: 30px;
+	color:#000;
+	font-weight: normal;
+}
+.you .you-top h1 .name{
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 70px;
+	background-image: none;
+}
+.you .you-top h1 .con{
+	margin-left: 60px;
+}
+div.del{
+	float: right;
+	background: none;
+}
+span.isd {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    display: block;
+    float: left;
+	margin-left: 10px;
+    margin-top: 9px;
+}
+div.sousuoimg{
+    background: url(../imgs/packed-5.png) no-repeat -139px -359px;
+    float: left;
+    width: 23px;
+    height: 22px;
+    margin-top: 18px;
+    margin-right: 15px;
 }

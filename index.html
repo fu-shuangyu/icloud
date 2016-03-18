@@ -7,7 +7,7 @@
 <script src="./js/index.js"></script>
 <link rel="stylesheet" href="./css/index.css">
 </head>
-<body ng-controller="rdCtrl" ng-dblclick="clear()" ng-click="xianshi=false">
+<body ng-controller="rdCtrl">
 	<div class="zuo">
 		<div class="title">
 			<span>
@@ -26,44 +26,57 @@
 		
 	</div>
 	<div class="you" ng-class="shijianliebiao[cindex].color">
-		<h1>
-			<input type="text" ng-model="shijianliebiao[cindex].name" ng-class="shijianliebiao[cindex].color" ng-blur="save()">
-			<div class="edit">
-				<span ng-click="xianshi=true" >选项</span>
-				<div class="zhanshibox"ng-show="xianshi">
-					<div class="zhanshi">
-						<input type="text" ng-model="shijianliebiao[cindex].name" ng-class="shijianliebiao[cindex].color" ng-blur="save()">
-						<span>列表颜色</span>
-						<ul><li ng-repeat="value in colors" ng-class="value"></li></ul>
-						<div class="hang"></div>
-						<div class="delete" ng-click="deleteItem()">删除</div>
-						<div class="deright">
-							<div class="quxiao">取消</div>
-							<div class="wncheng">完成</div>
+		<div class="you-top">
+			<div class="sousuoimg"></div>
+			<input type="text" id="iput" ng-model="key">
+			<span>付双钰</span>
+			<h1 ng-show="key">这是"{{key}}"的搜索结果
+				<ul ng-repeat="value in shijianliebiao | search:key">
+					<li class="name" ng-class="shijianliebiao[cindex].color">{{value.name}}</li>
+					<li class="con" ng-repeat="r in value.items">{{r.name}}</li>
+				</ul>
+			</h1>
+		</div>
+		<div class="you-bottom" ng-hide="key">
+			<h1>
+				<input type="text" ng-model="shijianliebiao[cindex].name" ng-class="shijianliebiao[cindex].color" ng-blur="save()">
+				<div class="edit">
+					<span ng-click="setTrue()" ng-dblclick="zz()">选项</span>
+					<div class="zhanshibox aa" ng-class="{bb:xianshi==true}">
+						<div class="zhanshi">
+							<input type="text" ng-model="shijianliebiao[cindex].name" ng-class="shijianliebiao[cindex].color" ng-blur="save()" >
+							<span ng-dblclick="zz()">列表颜色</span>
+							<ul><li ng-repeat="value in colors1" ng-click="shijianliebiao[cindex].color=colors[$index];save()" ng-class="value"></li></ul>
+							<div class="hang"></div>
+							<div class="delete" ng-click="deleteItem()" ng-dblclick="zz()">删除</div>
+							<div class="deright">
+								<div class="quxiao">取消</div>
+								<div class="wncheng" ng-click="setFalse()">完成</div>
+							</div>
 						</div>
 					</div>
 				</div>
+			</h1>
+			<div class="done-item">
+				<span>已完成事项:</span>
+				<span>{{countDone()}}项</span>
 			</div>
-		</h1>
-		<div class="done-item">
-			<span>已完成事项:</span>
-			<span>{{shijianliebiao[cindex].items.length}}项</span>
+			<ul class="true">
+				<li ng-repeat="value in shijianliebiao[cindex].items track by $index" ng-click="value.isDone=false;save()" ng-show="value.isDone">
+					<span class="isd"  ng-class="shijianliebiao[cindex].color+3"></span>
+					<input type="text" ng-class="shijianliebiao[cindex].color" ng-model="value.name" ng-blur="save()">
+					<div class="del"  ng-class="shijianliebiao[cindex].color" ng-click="deleteTodo($index)">删除</div>
+				</li>
+			</ul>
+			<ul>
+				<li ng-repeat="value in shijianliebiao[cindex].items track by $index" ng-click="value.isDone=true;save()" ng-hide="value.isDone">
+					<span class="isd" ng-class="shijianliebiao[cindex].color+2"></span>
+					<input type="text" ng-class="shijianliebiao[cindex].color" ng-model="value.name" ng-blur="save()" ng-click="zz($event)">
+					<div class="del" ng-class="shijianliebiao[cindex].color" ng-click="deleteTodo($index)">删除</div>
+				</li>
+			</ul>
+			<div class="new-item" ng-click="addTodo()">新项目...</div>
 		</div>
-		<ul class="true">
-			<li ng-repeat="value in shijianliebiao[cindex].items track by $index" ng-click="value.isDone=false;save()" ng-show="value.isDone">
-				<span>{{value.isDone}}</span>
-				<input type="text" ng-model="value.name" ng-blur="save()">
-				<button ng-click="deleteTodo($index)">删除</button>
-			</li>
-		</ul>
-		<ul>
-			<li ng-repeat="value in shijianliebiao[cindex].items track by $index" ng-click="value.isDone=true;save()" ng-hide="value.isDone">
-				<span>{{value.isDone}}</span>
-				<input type="text" ng-model="value.name" ng-blur="save()" ng-click="zz($event)">
-				<button ng-click="deleteTodo($index)">删除</button>
-			</li>
-		</ul>
-		<div class="new-item" ng-click="addTodo()">新项目...</div>
 	</div>
 </body>
 </html>
